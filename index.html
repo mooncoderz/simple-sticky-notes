@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sticky Notes</title>
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- For showing all added notes -->
+        <div class="all-notes">
+            <h2>My Notes</h2>
+            <ul>
+                <li>
+                    <div class="note-short-desc">
+                        <p>Dummy Title</p>
+                        <span>
+                            <img src="img/down.png" class="drop">
+                            <img src="img/cross.png" class="delete">
+                        </span>
+                    </div>
+                    <div class="note-description showHide">
+                        <p>Dummy Description. Your description will look here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur beatae vero assumenda ipsam rem labore! Tempora nulla quos ipsam quas ducimus impedit possimus ab exercitationem. Laboriosam, corporis. Delectus quidem amet nulla dicta autem eligendi vitae, earum officia non et totam?</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- For Showing the note description -->
+        <!-- <div class="note-description">
+
+        </div> -->
+
+        <!-- For adding new Notes -->
+        <div class="add-new">
+            <div id="error-msg"></div>
+            <input type="text" id="new-note-title" placeholder="Enter 3 Words Title" required>
+            <textarea type="text" id="new-note-desc" placeholder="Enter Description" required></textarea>
+            <button id="submit">Add Now</button>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>
