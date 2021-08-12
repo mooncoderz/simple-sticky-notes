@@ -16,11 +16,19 @@ body{
     margin: 0 auto;
     overflow: hidden;
 }
+#nightmode{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
 .all-notes{
     width: 35%;
     min-height: 100vh;
     height: 100vh;
-    padding: 30px 20px;
+    padding: 30px 0px;
     overflow: auto;
     border-right: 1px solid rgba(211, 211, 211, 0.336);
 }
@@ -39,7 +47,7 @@ body{
     display: block;
     border-bottom: 1px solid #8080802f;
     font-size: 1.1rem;
-    padding: 7px 0;
+    padding: 7px 20px;
     display: flex;
     flex-direction: column;
     transition: .5s;
@@ -124,7 +132,6 @@ body{
     background-color: crimson;
     color: white;
     cursor: pointer;
-    box-shadow: 0 0 5px rgb(170, 170, 170);
 }
 .add-new button:hover{
     transform: scale(.9);
@@ -133,4 +140,25 @@ body{
     margin-bottom: 10px;
     background-color: rgb(255, 190, 203);
     color: #05052b;
+}
+
+/* Dark Mode */
+.dark{
+    background-color: #161616;
+}
+.dark li{
+    background-color: #292929;
+    color: white;
+}
+.dark .note-description,
+.dark input,
+.dark textarea{
+    background-color: #3b3b3b;
+    color: white;
+}
+.dark input,
+.dark textarea,
+.dark .all-notes,
+.dark li{
+    border-color: #555555 !important;
 }

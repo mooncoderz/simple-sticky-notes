@@ -51,6 +51,10 @@ submit.addEventListener('click',() =>{
         noteDescriptionP.innerHTML = newDesc.value;
     }
     
+    // Remove Data from input and form tag
+    newTitle.value = '';
+    newDesc.value = '';
+
     // Calling a function to add event on delete button for new added notes
     crosBtn()
     // Calling a function to add event on dropdown button for new added notes
@@ -66,7 +70,7 @@ function crosBtn(){
             e.target.parentElement.parentElement.parentElement.style.opacity = 0;
             setTimeout(()=>{
                 e.target.parentElement.parentElement.parentElement.style.display = 'none';
-            }, 500)
+            }, 300)
         })
     }
 }
@@ -82,3 +86,15 @@ function drop(){
     }
 }
 drop()
+
+//  Night Mode
+ const night = document.querySelector('#nightmode'),
+        imgChange = document.querySelector('#nightmode');
+ night.addEventListener('click', () =>{
+     document.querySelector('#body').classList.toggle('dark');
+    if(document.querySelector('#body').hasClass= 'dark'){
+        console.log("night mode")
+    }else{
+        console.log('Day Mode')
+    }
+})
