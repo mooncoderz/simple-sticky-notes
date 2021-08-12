@@ -10,20 +10,25 @@ submit.addEventListener('click',() =>{
     if(newTitle.value == "" || newDesc.value == ""){
         errorMsg.innerHTML = 'All Fields are required';
     }else{
+        // Create New li tag and insert in the main div
         let newli = document.createElement('li');
         newNote.insertAdjacentElement('afterbegin', newli);
-        // Add div Tag
+
+        // Add div Tag for short description and images
         let noteShortDesc = document.createElement('div');
         noteShortDesc.classList.add('note-short-desc');
         newli.insertAdjacentElement('afterbegin', noteShortDesc);
-        // Add P Tag
+
+        // Add P Tag for short description
         let noteShortDescP = document.createElement('p');
         noteShortDescP.innerHTML = newTitle.value;
         noteShortDesc.insertAdjacentElement('afterbegin', noteShortDescP);
-        // Add span tag for images
+
+        // Add span tag for images i.e. delete, dropdwon
         let imgSpan = document.createElement('span');
         noteShortDesc.insertAdjacentElement("beforeend", imgSpan);
-        // Add Image Tag
+
+        // Add Images Tag and insert in to span tage
         let noteShortDescImg1 = document.createElement('img');
         let noteShortDescImg2 = document.createElement('img');
         noteShortDescImg1.src = 'img/down.png';
@@ -38,13 +43,17 @@ submit.addEventListener('click',() =>{
         noteDescription.classList.add('note-description');
         noteDescription.classList.add('showHide');
         newli.insertAdjacentElement('beforeend', noteDescription);
+
         // // Add p tag in description tag
         let noteDescriptionP = document.createElement('p');
         noteDescription.insertAdjacentElement('afterbegin', noteDescriptionP);
         noteShortDesc.insertAdjacentElement('afterbegin', noteShortDescP);
         noteDescriptionP.innerHTML = newDesc.value;
     }
+    
+    // Calling a function to add event on delete button for new added notes
     crosBtn()
+    // Calling a function to add event on dropdown button for new added notes
     drop();
 });
 
@@ -62,7 +71,8 @@ function crosBtn(){
     }
 }
 crosBtn()
-// DropDown A Note
+
+// DropDown A Note Description
 function drop(){
     let drop = document.querySelectorAll('.all-notes ul li .drop');
     for( let i = 0; i < drop.length; i++){
