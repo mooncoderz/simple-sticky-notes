@@ -83,18 +83,22 @@ function drop(){
         drop[i].addEventListener('click', (e) =>{
             e.target.parentElement.parentElement.nextElementSibling.classList.toggle('showHide'); 
         })
+        break;
     }
 }
 drop()
 
 //  Night Mode
- const night = document.querySelector('#nightmode'),
-        imgChange = document.querySelector('#nightmode');
- night.addEventListener('click', () =>{
-     document.querySelector('#body').classList.toggle('dark');
-    if(document.querySelector('#body').hasClass= 'dark'){
-        console.log("night mode")
+const night = document.querySelector('#nightmode');
+
+night.addEventListener('click', () =>{
+    document.querySelector('#body').classList.toggle('dark');
+
+    if(night.getAttribute('src') == 'img/night.png'){
+        night.setAttribute('src', 'img/day.png');
+        night.setAttribute('title','Go to Day Mode');
     }else{
-        console.log('Day Mode')
+        night.setAttribute('src', 'img/night.png');
+        night.setAttribute('title','Go to Night Mode');
     }
 })
